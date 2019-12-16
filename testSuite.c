@@ -18,7 +18,10 @@ void runTestSuite()
     if(testPin3&&!testPin4)
         runMotorTest();
     else if(!testPin3&&testPin4)
-        runBumperTest();
+        while(testPin4)
+        {
+            runBumperTest();
+        }
     else
         runLightTest();
     
@@ -57,6 +60,24 @@ void runBumperTest()
 {
     
     printf("I'm in the bumper test.\n");
+    
+    //while(1)
+    //{
+        if(leftBumper)
+        {
+            printf("the switch is closed");
+            turnRedLEDOn();
+        }
+        
+        if(!rightBumper)
+        {
+            
+            printf("the switch is closed");
+            turnGreenLEDOn();
+        }
+        if(!leftBumper && rightBumper)
+            turnLEDsOff();
+    //}
 }
 
 void runLightTest()

@@ -37,6 +37,8 @@ void setupPins()
     pin4Direction = INPUT; //dip switch
     pin5Direction = OUTPUT; //the red LED
     pin6Direction = OUTPUT; //the green LED
+    pin7Direction = INPUT; // RIGHT BUMPER
+    pin14Direction = INPUT; // LEFT BUMPER
     pin23Direction = OUTPUT; //motor
     pin24Direction = OUTPUT; //motor
     pin25Direction = OUTPUT; //motor
@@ -45,6 +47,8 @@ void setupPins()
     pin4Type = DIGITAL; //dip switch
     pin5Type = DIGITAL; //the red LED
     pin6Type = DIGITAL; //the green LED
+    pin7Type = DIGITAL; // RIGHT BUMPER
+    //pin14Type = DIGITAL; // LEFT BUMPER
     pin23Type = DIGITAL; //motor
     pin24Type = DIGITAL; //motor
     pin25Type = DIGITAL; //motor

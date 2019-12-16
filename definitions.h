@@ -20,6 +20,9 @@
 #define leftMotorCCW digOutput24
 #define rightMotorCW digOutput25
 #define rightMotorCCW digOutput26
+#define leftBumper digInput14
+#define rightBumper digInput7
+
 
 /*
  * function definitions
@@ -40,5 +43,6 @@ void turnRight();
 void turnLeft();
 void theSequence();
 void turnLEDsOff();
+void checkBumpers();
 
 #endif // DEFINITIONS_H_ 
