@@ -8,8 +8,8 @@
 #include "aliases.h"
 #include "utilities.h"
 const int 
-    movePause = 50,
-    transitionPause = 50,
+    movePause = 100,
+    transitionPause = 100,
     //forwardDelay = 125, // theSequence() values
     forwardDelay = 80,
     backwardDelay = 95,
@@ -50,8 +50,8 @@ void checkBumpers()
 {
     int i = 0;
     int leftReaction = 0, rightReaction = 0;
-    for(i = 0; i < 10; i++)
-    {
+//    for(i = 0; i < 10; i++)
+//    {
         if(leftBumper && rightBumper)
         {
             leftReaction = 1;
@@ -105,7 +105,12 @@ void checkBumpers()
             moveForward();
         }
         pause(10);
-    }
+        if(leftReaction || rightReaction)
+        {
+            resetSRLatch();
+            
+        }
+    //}
     pause(movePause);
 }
 

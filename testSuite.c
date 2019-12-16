@@ -61,23 +61,27 @@ void runBumperTest()
     
     printf("I'm in the bumper test.\n");
     
-    //while(1)
-    //{
+    while(1)
+    {
         if(leftBumper)
         {
-            printf("the switch is closed");
+            printf("the left switch is closed\n");
             turnRedLEDOn();
         }
         
-        if(!rightBumper)
+        if(rightBumper)
         {
             
-            printf("the switch is closed");
+            printf("the right       switch is closed\n");
             turnGreenLEDOn();
         }
-        if(!leftBumper && rightBumper)
+        if(leftBumper || rightBumper)
+        {
+            resetSRLatch();
             turnLEDsOff();
-    //}
+        }
+        //pause(1000);
+    }
 }
 
 void runLightTest()

@@ -22,11 +22,14 @@
 #define rightMotorCCW digOutput26
 #define leftBumper digInput14
 #define rightBumper digInput7
+#define resetLatch digOutput10
 
 
 /*
  * function definitions
  */
+
+void resetSRLatch();
 void setupPins();
 void turngreenLEDOn();
 void turngreenLEDOff();

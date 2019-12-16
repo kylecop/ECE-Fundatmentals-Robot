@@ -8,28 +8,34 @@
 #include "aliases.h"
 #include "utilities.h"
 
-
+void resetSRLatch()
+{
+    printf("the latch is reset\n");
+    resetLatch = ON;
+    pause(20);
+    resetLatch = OFF;
+}
 void turnRedLEDOn() // left
 {
-    printf("The red LED is on.\n");
+    //printf("The red LED is on.\n");
     redLED = ON;
 }
 
 void turnRedLEDOff()
 {
-    printf("The red LED is off.\n");
+    //printf("The red LED is off.\n");
     redLED = OFF;
 }
 
 void turnGreenLEDOn() //left
 {
-    printf("The green LED is on.\n");
+    //printf("The green LED is on.\n");
     greenLED = ON;
 }
 
 void turnGreenLEDOff()
 {
-    printf("The green LED is off.\n");
+    //printf("The green LED is off.\n");
     greenLED = OFF;
 }
 
