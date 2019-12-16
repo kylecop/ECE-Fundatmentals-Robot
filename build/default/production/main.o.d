@@ -1,4 +1,5 @@
 build/default/production/main.o:  \
 main.c  \
 aliases.h  \
-utilities.h 
+utilities.h  \
+definitions.h 

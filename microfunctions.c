@@ -9,7 +9,7 @@
 #include "utilities.h"
 
 
-void turnRedLEDOn()
+void turnRedLEDOn() // left
 {
     printf("The red LED is on.\n");
     redLED = ON;
@@ -21,7 +21,7 @@ void turnRedLEDOff()
     redLED = OFF;
 }
 
-void turnGreenLEDOn()
+void turnGreenLEDOn() //left
 {
     printf("The green LED is on.\n");
     greenLED = ON;
@@ -32,3 +32,59 @@ void turnGreenLEDOff()
     printf("The green LED is off.\n");
     greenLED = OFF;
 }
+
+
+void motorsOff()
+{
+    printf("motorsOff\n");
+    leftMotorCW = OFF;
+    leftMotorCCW = OFF;
+    rightMotorCW = OFF;
+    rightMotorCCW = OFF;
+    turnLEDsOff();
+}
+
+void turnLEDsOnIfMoving()
+{
+    
+    if(leftMotorCCW == ON || leftMotorCW == ON)
+        turnGreenLEDOn();//left
+        
+    if(rightMotorCW == ON || rightMotorCCW == ON)
+        turnRedLEDOn();//right
+}
+
+void turnLEDsOff()
+{
+    turnRedLEDOff();//left
+    turnGreenLEDOff();//right
+}
+
+void turnLeftMotorForward()
+{
+    printf("leftMotorForward\n");
+    leftMotorCW = ON;
+}
+
+
+void turnLeftMotorBackward()
+{
+    printf("leftMotorBackward\n");
+    leftMotorCCW = ON;
+}
+
+
+void turnRightMotorForward()
+{
+    
+    printf("rightMotorForward\n");
+    rightMotorCW = ON;
+}
+
+
+void turnRightMotorBackward()
+{
+    printf("rightMotorBackward\n");
+    rightMotorCCW = ON;
+}
+
