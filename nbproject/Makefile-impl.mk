@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Project9FromScratch
+PROJECTNAME=Project9Home
 
 # Active Configuration
 DEFAULTCONF=default

@@ -25,7 +25,7 @@ void moveForward()
 	turnRightMotorForward();
 	pause(forwardMs);
 	motorsOff();
-	pause(movePause);
+	
 	turnGreenLEDOff();
 }
 
@@ -41,7 +41,6 @@ void moveBackward()
 	turnLeftMotorBackward();
 	pause(backwardDelay);
 	motorsOff();
-	pause(movePause);
 }
 
 void turnRight()
@@ -60,7 +59,6 @@ void turnRight()
 	turnRightMotorBackward();
 	pause(rightMs);
 	motorsOff();
-	pause(movePause);
 }
 
 void turnLeft()
@@ -79,6 +77,5 @@ void turnLeft()
 	turnLeftMotorBackward();
 	pause(leftMs);
 	motorsOff();
-	pause(movePause);
 }
 

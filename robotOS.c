@@ -16,6 +16,7 @@ void runRobotOS()
     while(1)
     {
 	    moveForward();
+	    pause(300);
 	    int bumperState = checkBumpers();
 	    
 	    if(bumperState == CLEAR && bumperIsClearCount > 1)
@@ -27,6 +28,7 @@ void runRobotOS()
 		    clearObstacle(bumperState);
 		    bumperIsClearCount = 0;
 	    }
+	    pause(300);
     }
     printf("Robot will shut down... \n");
     halt();

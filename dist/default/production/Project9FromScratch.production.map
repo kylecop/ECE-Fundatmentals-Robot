@@ -1,4 +1,5 @@
-Microchip Technology Inc, vv3_30 (B) À’{´:=
+Microchip Technology Inc, vv3_30 (B) duKèƒt
+
 
 Tool Name:
   c:\program files (x86)\microchip\mplab c30\bin\bin\..\bin/pic30-elf-ld.exe
@@ -80,13 +81,13 @@ section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x100               0xa5c           0xf8a  (3978)
 .const                       0xb5c               0x112           0x19b  (411)
-.text                        0xc6e               0x3a0           0x570  (1392)
-.dinit                      0x100e                0xc4           0x126  (294)
-.text                       0x10d2               0x29a           0x3e7  (999)
-.init.delay32               0x136c                0x1c            0x2a  (42)
-.text                       0x1388                 0xe            0x15  (21)
+.text                        0xc6e               0x3d8           0x5c4  (1476)
+.dinit                      0x1046                0xc4           0x126  (294)
+.text                       0x110a               0x26c           0x3a2  (930)
+.init.delay32               0x1376                0x1c            0x2a  (42)
+.text                       0x1392                 0xe            0x15  (21)
 
-                     Total program memory used (bytes):         0x1be1  (7137) 29%
+                     Total program memory used (bytes):         0x1bf0  (7152) 29%
 
 
 Data Memory  [Origin = 0x800, Length = 0x800]
@@ -150,56 +151,54 @@ External Symbols in Program Memory (by address):
                   0x000af4                  ___moddi3
                   0x000c6e                  _clearObstacle
                   0x000c8c                  _clearLeftBumperObstacle
-                  0x000ca8                  _clearRightBumperObstacle
-                  0x000cc4                  _clearDoubleBumperObstacle
-                  0x000dda                  _checkBumpers
-                  0x000e24                  _runTestSuite
-                  0x000e62                  _runMotorTest
-                  0x000e9a                  _runBumperTest
-                  0x000ed4                  _runLightTest
-                  0x000f36                  _initializeUART
-                  0x000f48                  _pause
-                  0x000f6e                  _getAnalogValue
-                  0x000fca                  _halt
-                  0x000fce                  _startPinTimer12
-                  0x000fde                  _stopPinTimer12
-                  0x000fe6                  _readPinTimer12
-                  0x000fee                  _startPinTimer11
-                  0x000ffe                  _stopPinTimer11
-                  0x001006                  _readPinTimer11
-                  0x0010d2                  _moveForward
-                  0x001106                  _moveBackward
-                  0x001126                  _turnRight
-                  0x001152                  _turnLeft
-                  0x00117e                  _turnTowardLight
-                  0x00119a                  _getLightDirection
-                  0x0011bc                  _checkIfUnderLight
-                  0x0011fa                  _checkIfCloseToLight
-                  0x001222                  _turnLEDsOff
-                  0x00122c                  _turnRedLEDOn
-                  0x001234                  _toggleRedLED
-                  0x001242                  _toggleGreenLED
-                  0x001250                  _turnRedLEDOff
-                  0x001258                  _turnGreenLEDOn
-                  0x001260                  _turnGreenLEDOff
-                  0x001268                  _runRobotOS
-                  0x0012a2                  _getLightValues
-                  0x0012dc                  _setupPins
-                  0x001312                  _motorsOff
-                  0x001320                  _turnLeftMotorForward
-                  0x001328                  _turnLeftMotorBackward
-                  0x001330                  _turnRightMotorForward
-                  0x001338                  _turnRightMotorBackward
-                  0x001340                  _main
-                  0x00136c                  ___delay32
-                  0x001388                  _resetSRLatch
+                  0x000cbc                  _clearRightBumperObstacle
+                  0x000cec                  _clearDoubleBumperObstacle
+                  0x000e12                  _checkBumpers
+                  0x000e62                  _runTestSuite
+                  0x000ea0                  _runMotorTest
+                  0x000ed8                  _runBumperTest
+                  0x000f12                  _runLightTest
+                  0x000f6e                  _initializeUART
+                  0x000f80                  _pause
+                  0x000fa6                  _getAnalogValue
+                  0x001002                  _halt
+                  0x001006                  _startPinTimer12
+                  0x001016                  _stopPinTimer12
+                  0x00101e                  _readPinTimer12
+                  0x001026                  _startPinTimer11
+                  0x001036                  _stopPinTimer11
+                  0x00103e                  _readPinTimer11
+                  0x00110a                  _turnTowardLight
+                  0x001126                  _getLightDirection
+                  0x001148                  _checkIfUnderLight
+                  0x001186                  _checkIfCloseToLight
+                  0x0011ae                  _moveForward
+                  0x0011de                  _moveBackward
+                  0x0011fa                  _turnRight
+                  0x001222                  _turnLeft
+                  0x00124a                  _runRobotOS
+                  0x00128a                  _setupPins
+                  0x0012c0                  _getLightValues
+                  0x0012f2                  _motorsOff
+                  0x001300                  _turnLeftMotorForward
+                  0x001308                  _turnLeftMotorBackward
+                  0x001310                  _turnRightMotorForward
+                  0x001318                  _turnRightMotorBackward
+                  0x001320                  _main
+                  0x00134c                  _turnLEDsOff
+                  0x001356                  _turnRedLEDOn
+                  0x00135e                  _turnRedLEDOff
+                  0x001366                  _turnGreenLEDOn
+                  0x00136e                  _turnGreenLEDOff
+                  0x001376                  ___delay32
+                  0x001392                  _resetSRLatch
 
 External Symbols in Program Memory (by name):
 
                   0x000194                  _ConfigIntUART1
                   0x0001ea                  _OpenUART1
                   0x000190                  __DefaultInterrupt
-                  0x00136c                  ___delay32
+                  0x001376                  ___delay32
                   0x000a88                  ___divdi3
                   0x000af4                  ___moddi3
                   0x000a72                  ___udivdi3
@@ -211,52 +210,50 @@ External Symbols in Program Memory (by name):
                   0x000122                  __psv_init
                   0x000100                  __resetPRI
                   0x00034c                  __vfprintf_cdnopuxX
-                  0x000dda                  _checkBumpers
-                  0x0011fa                  _checkIfCloseToLight
-                  0x0011bc                  _checkIfUnderLight
-                  0x000cc4                  _clearDoubleBumperObstacle
+                  0x000e12                  _checkBumpers
+                  0x001186                  _checkIfCloseToLight
+                  0x001148                  _checkIfUnderLight
+                  0x000cec                  _clearDoubleBumperObstacle
                   0x000c8c                  _clearLeftBumperObstacle
                   0x000c6e                  _clearObstacle
-                  0x000ca8                  _clearRightBumperObstacle
+                  0x000cbc                  _clearRightBumperObstacle
                   0x0001f2                  _fputs
-                  0x000f6e                  _getAnalogValue
-                  0x00119a                  _getLightDirection
-                  0x0012a2                  _getLightValues
-                  0x000fca                  _halt
-                  0x000f36                  _initializeUART
-                  0x001340                  _main
-                  0x001312                  _motorsOff
-                  0x001106                  _moveBackward
-                  0x0010d2                  _moveForward
-                  0x000f48                  _pause
+                  0x000fa6                  _getAnalogValue
+                  0x001126                  _getLightDirection
+                  0x0012c0                  _getLightValues
+                  0x001002                  _halt
+                  0x000f6e                  _initializeUART
+                  0x001320                  _main
+                  0x0012f2                  _motorsOff
+                  0x0011de                  _moveBackward
+                  0x0011ae                  _moveForward
+                  0x000f80                  _pause
                   0x000210                  _puts
-                  0x001006                  _readPinTimer11
-                  0x000fe6                  _readPinTimer12
-                  0x001388                  _resetSRLatch
-                  0x000e9a                  _runBumperTest
-                  0x000ed4                  _runLightTest
-                  0x000e62                  _runMotorTest
-                  0x001268                  _runRobotOS
-                  0x000e24                  _runTestSuite
-                  0x0012dc                  _setupPins
-                  0x000fee                  _startPinTimer11
-                  0x000fce                  _startPinTimer12
-                  0x000ffe                  _stopPinTimer11
-                  0x000fde                  _stopPinTimer12
-                  0x001242                  _toggleGreenLED
-                  0x001234                  _toggleRedLED
-                  0x001260                  _turnGreenLEDOff
-                  0x001258                  _turnGreenLEDOn
-                  0x001222                  _turnLEDsOff
-                  0x001152                  _turnLeft
-                  0x001328                  _turnLeftMotorBackward
-                  0x001320                  _turnLeftMotorForward
-                  0x001250                  _turnRedLEDOff
-                  0x00122c                  _turnRedLEDOn
-                  0x001126                  _turnRight
-                  0x001338                  _turnRightMotorBackward
-                  0x001330                  _turnRightMotorForward
-                  0x00117e                  _turnTowardLight
+                  0x00103e                  _readPinTimer11
+                  0x00101e                  _readPinTimer12
+                  0x001392                  _resetSRLatch
+                  0x000ed8                  _runBumperTest
+                  0x000f12                  _runLightTest
+                  0x000ea0                  _runMotorTest
+                  0x00124a                  _runRobotOS
+                  0x000e62                  _runTestSuite
+                  0x00128a                  _setupPins
+                  0x001026                  _startPinTimer11
+                  0x001006                  _startPinTimer12
+                  0x001036                  _stopPinTimer11
+                  0x001016                  _stopPinTimer12
+                  0x00136e                  _turnGreenLEDOff
+                  0x001366                  _turnGreenLEDOn
+                  0x00134c                  _turnLEDsOff
+                  0x001222                  _turnLeft
+                  0x001308                  _turnLeftMotorBackward
+                  0x001300                  _turnLeftMotorForward
+                  0x00135e                  _turnRedLEDOff
+                  0x001356                  _turnRedLEDOn
+                  0x0011fa                  _turnRight
+                  0x001318                  _turnRightMotorBackward
+                  0x001310                  _turnRightMotorForward
+                  0x00110a                  _turnTowardLight
 
 Memory Configuration
 
@@ -425,73 +422,73 @@ userdata
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x3453
+.debug_info       0x000000       0x34e5
  *(.debug_info)
  .debug_info      0x000000        0x22b build/default/production/main.o
  .debug_info      0x00022b        0x178 build/default/production/robotOS.o
- .debug_info      0x0003a3        0x324 build/default/production/testSuite.o
- .debug_info      0x0006c7        0xcc5 build/default/production/utilities.o
- .debug_info      0x00138c        0x2dd build/default/production/microMotorController.o
- .debug_info      0x001669        0x2f7 build/default/production/microLEDController.o
- .debug_info      0x001960        0x294 build/default/production/microPhotoResistorController.o
- .debug_info      0x001bf4        0x250 build/default/production/microLatchController.o
- .debug_info      0x001e44        0x1d6 build/default/production/robotOsMotorController.o
- .debug_info      0x00201a        0x436 build/default/production/robotOsBumperController.o
- .debug_info      0x002450        0x4f7 build/default/production/mainSetup.o
- .debug_info      0x002947        0x285 build/default/production/robotOsPhotoResistorController.o
- .debug_info      0x002bcc        0x7c6 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib\libpic30-elf.a(write.eo)
- .debug_info      0x003392         0xc1 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib\libpic30-elf.a(c30_uart.eo)
+ .debug_info      0x0003a3        0x3ee build/default/production/testSuite.o
+ .debug_info      0x000791        0xcc5 build/default/production/utilities.o
+ .debug_info      0x001456        0x2dd build/default/production/microMotorController.o
+ .debug_info      0x001733        0x2bf build/default/production/microLEDController.o
+ .debug_info      0x0019f2        0x294 build/default/production/microPhotoResistorController.o
+ .debug_info      0x001c86        0x250 build/default/production/microLatchController.o
+ .debug_info      0x001ed6        0x1d6 build/default/production/robotOsMotorController.o
+ .debug_info      0x0020ac        0x436 build/default/production/robotOsBumperController.o
+ .debug_info      0x0024e2        0x4f7 build/default/production/mainSetup.o
+ .debug_info      0x0029d9        0x285 build/default/production/robotOsPhotoResistorController.o
+ .debug_info      0x002c5e        0x7c6 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib\libpic30-elf.a(write.eo)
+ .debug_info      0x003424         0xc1 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib\libpic30-elf.a(c30_uart.eo)
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000        0x96a
+.debug_abbrev     0x000000        0x93d
  *(.debug_abbrev)
  .debug_abbrev    0x000000         0x88 build/default/production/main.o
  .debug_abbrev    0x000088         0x55 build/default/production/robotOS.o
- .debug_abbrev    0x0000dd         0xb3 build/default/production/testSuite.o
- .debug_abbrev    0x000190        0x172 build/default/production/utilities.o
- .debug_abbrev    0x000302         0x86 build/default/production/microMotorController.o
- .debug_abbrev    0x000388         0x86 build/default/production/microLEDController.o
- .debug_abbrev    0x00040e         0xa2 build/default/production/microPhotoResistorController.o
- .debug_abbrev    0x0004b0         0x86 build/default/production/microLatchController.o
- .debug_abbrev    0x000536         0x74 build/default/production/robotOsMotorController.o
- .debug_abbrev    0x0005aa         0xe3 build/default/production/robotOsBumperController.o
- .debug_abbrev    0x00068d         0x86 build/default/production/mainSetup.o
- .debug_abbrev    0x000713         0xb1 build/default/production/robotOsPhotoResistorController.o
- .debug_abbrev    0x0007c4        0x176 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib\libpic30-elf.a(write.eo)
- .debug_abbrev    0x00093a         0x30 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib\libpic30-elf.a(c30_uart.eo)
+ .debug_abbrev    0x0000dd         0x86 build/default/production/testSuite.o
+ .debug_abbrev    0x000163        0x172 build/default/production/utilities.o
+ .debug_abbrev    0x0002d5         0x86 build/default/production/microMotorController.o
+ .debug_abbrev    0x00035b         0x86 build/default/production/microLEDController.o
+ .debug_abbrev    0x0003e1         0xa2 build/default/production/microPhotoResistorController.o
+ .debug_abbrev    0x000483         0x86 build/default/production/microLatchController.o
+ .debug_abbrev    0x000509         0x74 build/default/production/robotOsMotorController.o
+ .debug_abbrev    0x00057d         0xe3 build/default/production/robotOsBumperController.o
+ .debug_abbrev    0x000660         0x86 build/default/production/mainSetup.o
+ .debug_abbrev    0x0006e6         0xb1 build/default/production/robotOsPhotoResistorController.o
+ .debug_abbrev    0x000797        0x176 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib\libpic30-elf.a(write.eo)
+ .debug_abbrev    0x00090d         0x30 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib\libpic30-elf.a(c30_uart.eo)
 
-.debug_line       0x000000       0x1971
+.debug_line       0x000000       0x1999
  *(.debug_line)
  .debug_line      0x000000        0x14e build/default/production/main.o
- .debug_line      0x00014e        0x159 build/default/production/robotOS.o
- .debug_line      0x0002a7        0x2cd build/default/production/testSuite.o
- .debug_line      0x000574        0x2e5 build/default/production/utilities.o
- .debug_line      0x000859        0x18e build/default/production/microMotorController.o
- .debug_line      0x0009e7        0x1cc build/default/production/microLEDController.o
- .debug_line      0x000bb3        0x186 build/default/production/microPhotoResistorController.o
- .debug_line      0x000d39        0x126 build/default/production/microLatchController.o
- .debug_line      0x000e5f        0x288 build/default/production/robotOsMotorController.o
- .debug_line      0x0010e7        0x325 build/default/production/robotOsBumperController.o
- .debug_line      0x00140c        0x1c3 build/default/production/mainSetup.o
- .debug_line      0x0015cf        0x200 build/default/production/robotOsPhotoResistorController.o
- .debug_line      0x0017cf        0x170 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib\libpic30-elf.a(write.eo)
- .debug_line      0x00193f         0x32 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib\libpic30-elf.a(c30_uart.eo)
+ .debug_line      0x00014e        0x169 build/default/production/robotOS.o
+ .debug_line      0x0002b7        0x2ed build/default/production/testSuite.o
+ .debug_line      0x0005a4        0x2e5 build/default/production/utilities.o
+ .debug_line      0x000889        0x18e build/default/production/microMotorController.o
+ .debug_line      0x000a17        0x17c build/default/production/microLEDController.o
+ .debug_line      0x000b93        0x176 build/default/production/microPhotoResistorController.o
+ .debug_line      0x000d09        0x126 build/default/production/microLatchController.o
+ .debug_line      0x000e2f        0x268 build/default/production/robotOsMotorController.o
+ .debug_line      0x001097        0x39d build/default/production/robotOsBumperController.o
+ .debug_line      0x001434        0x1c3 build/default/production/mainSetup.o
+ .debug_line      0x0015f7        0x200 build/default/production/robotOsPhotoResistorController.o
+ .debug_line      0x0017f7        0x170 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib\libpic30-elf.a(write.eo)
+ .debug_line      0x001967         0x32 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib\libpic30-elf.a(c30_uart.eo)
 
-.debug_frame      0x000000        0x468
+.debug_frame      0x000000        0x456
  *(.debug_frame)
  .debug_frame     0x000000         0x27 build/default/production/main.o
  .debug_frame     0x000027         0x27 build/default/production/robotOS.o
- .debug_frame     0x00004e         0xc4 build/default/production/testSuite.o
- .debug_frame     0x000112         0xb7 build/default/production/utilities.o
- .debug_frame     0x0001c9         0x67 build/default/production/microMotorController.o
- .debug_frame     0x000230         0x87 build/default/production/microLEDController.o
- .debug_frame     0x0002b7         0x27 build/default/production/microPhotoResistorController.o
- .debug_frame     0x0002de         0x27 build/default/production/microLatchController.o
- .debug_frame     0x000305         0x57 build/default/production/robotOsMotorController.o
- .debug_frame     0x00035c         0x67 build/default/production/robotOsBumperController.o
- .debug_frame     0x0003c3         0x27 build/default/production/mainSetup.o
- .debug_frame     0x0003ea         0x57 build/default/production/robotOsPhotoResistorController.o
- .debug_frame     0x000441         0x27 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib\libpic30-elf.a(write.eo)
+ .debug_frame     0x00004e         0xd2 build/default/production/testSuite.o
+ .debug_frame     0x000120         0xb7 build/default/production/utilities.o
+ .debug_frame     0x0001d7         0x67 build/default/production/microMotorController.o
+ .debug_frame     0x00023e         0x67 build/default/production/microLEDController.o
+ .debug_frame     0x0002a5         0x27 build/default/production/microPhotoResistorController.o
+ .debug_frame     0x0002cc         0x27 build/default/production/microLatchController.o
+ .debug_frame     0x0002f3         0x57 build/default/production/robotOsMotorController.o
+ .debug_frame     0x00034a         0x67 build/default/production/robotOsBumperController.o
+ .debug_frame     0x0003b1         0x27 build/default/production/mainSetup.o
+ .debug_frame     0x0003d8         0x57 build/default/production/robotOsPhotoResistorController.o
+ .debug_frame     0x00042f         0x27 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib\libpic30-elf.a(write.eo)
 
 .debug_str        0x000000         0xd5
  *(.debug_str)
@@ -515,7 +512,7 @@ userdata
  *(.debug_macinfo)
 
 .debug_pubnames
-                  0x000000        0x467
+                  0x000000        0x443
  *(.debug_pubnames)
  .debug_pubnames
                   0x000000         0x1b build/default/production/main.o
@@ -528,23 +525,23 @@ userdata
  .debug_pubnames
                   0x000166         0x88 build/default/production/microMotorController.o
  .debug_pubnames
-                  0x0001ee         0x90 build/default/production/microLEDController.o
+                  0x0001ee         0x6c build/default/production/microLEDController.o
  .debug_pubnames
-                  0x00027e         0x25 build/default/production/microPhotoResistorController.o
+                  0x00025a         0x25 build/default/production/microPhotoResistorController.o
  .debug_pubnames
-                  0x0002a3         0x23 build/default/production/microLatchController.o
+                  0x00027f         0x23 build/default/production/microLatchController.o
  .debug_pubnames
-                  0x0002c6         0x4e build/default/production/robotOsMotorController.o
+                  0x0002a2         0x4e build/default/production/robotOsMotorController.o
  .debug_pubnames
-                  0x000314         0x8c build/default/production/robotOsBumperController.o
+                  0x0002f0         0x8c build/default/production/robotOsBumperController.o
  .debug_pubnames
-                  0x0003a0         0x20 build/default/production/mainSetup.o
+                  0x00037c         0x20 build/default/production/mainSetup.o
  .debug_pubnames
-                  0x0003c0         0x6a build/default/production/robotOsPhotoResistorController.o
+                  0x00039c         0x6a build/default/production/robotOsPhotoResistorController.o
  .debug_pubnames
-                  0x00042a         0x1c c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib\libpic30-elf.a(write.eo)
+                  0x000406         0x1c c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib\libpic30-elf.a(write.eo)
  .debug_pubnames
-                  0x000446         0x21 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib\libpic30-elf.a(c30_uart.eo)
+                  0x000422         0x21 c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib\libpic30-elf.a(c30_uart.eo)
 
 .debug_ranges
  *(.debug_ranges)
@@ -1181,71 +1178,69 @@ __c30_signature
  .const             0x8c3c         0x20 build/default/production/robotOS.o
  .const             0x8c5c         0x12 build/default/production/main.o
 
-.text             0x000c6e        0x3a0
- .text            0x000c6e        0x1b6 build/default/production/robotOsBumperController.o
+.text             0x000c6e        0x3d8
+ .text            0x000c6e        0x1f4 build/default/production/robotOsBumperController.o
                   0x000c6e                  _clearObstacle
                   0x000c8c                  _clearLeftBumperObstacle
-                  0x000ca8                  _clearRightBumperObstacle
-                  0x000cc4                  _clearDoubleBumperObstacle
-                  0x000dda                  _checkBumpers
- .text            0x000e24        0x112 build/default/production/testSuite.o
-                  0x000e24                  _runTestSuite
-                  0x000e62                  _runMotorTest
-                  0x000e9a                  _runBumperTest
-                  0x000ed4                  _runLightTest
- .text            0x000f36         0xd8 build/default/production/utilities.o
-                  0x000f36                  _initializeUART
-                  0x000f48                  _pause
-                  0x000f6e                  _getAnalogValue
-                  0x000fca                  _halt
-                  0x000fce                  _startPinTimer12
-                  0x000fde                  _stopPinTimer12
-                  0x000fe6                  _readPinTimer12
-                  0x000fee                  _startPinTimer11
-                  0x000ffe                  _stopPinTimer11
-                  0x001006                  _readPinTimer11
+                  0x000cbc                  _clearRightBumperObstacle
+                  0x000cec                  _clearDoubleBumperObstacle
+                  0x000e12                  _checkBumpers
+ .text            0x000e62        0x10c build/default/production/testSuite.o
+                  0x000e62                  _runTestSuite
+                  0x000ea0                  _runMotorTest
+                  0x000ed8                  _runBumperTest
+                  0x000f12                  _runLightTest
+ .text            0x000f6e         0xd8 build/default/production/utilities.o
+                  0x000f6e                  _initializeUART
+                  0x000f80                  _pause
+                  0x000fa6                  _getAnalogValue
+                  0x001002                  _halt
+                  0x001006                  _startPinTimer12
+                  0x001016                  _stopPinTimer12
+                  0x00101e                  _readPinTimer12
+                  0x001026                  _startPinTimer11
+                  0x001036                  _stopPinTimer11
+                  0x00103e                  _readPinTimer11
 
-.dinit            0x00100e         0xc4
- .dinit           0x00100e         0xc4 data_init
+.dinit            0x001046         0xc4
+ .dinit           0x001046         0xc4 data_init
 
-.text             0x0010d2        0x29a
- .text            0x0010d2         0xac build/default/production/robotOsMotorController.o
-                  0x0010d2                  _moveForward
-                  0x001106                  _moveBackward
-                  0x001126                  _turnRight
-                  0x001152                  _turnLeft
- .text            0x00117e         0xa4 build/default/production/robotOsPhotoResistorController.o
-                  0x00117e                  _turnTowardLight
-                  0x00119a                  _getLightDirection
-                  0x0011bc                  _checkIfUnderLight
-                  0x0011fa                  _checkIfCloseToLight
- .text            0x001222         0x46 build/default/production/microLEDController.o
-                  0x001222                  _turnLEDsOff
-                  0x00122c                  _turnRedLEDOn
-                  0x001234                  _toggleRedLED
-                  0x001242                  _toggleGreenLED
-                  0x001250                  _turnRedLEDOff
-                  0x001258                  _turnGreenLEDOn
-                  0x001260                  _turnGreenLEDOff
- .text            0x001268         0x3a build/default/production/robotOS.o
-                  0x001268                  _runRobotOS
- .text            0x0012a2         0x3a build/default/production/microPhotoResistorController.o
-                  0x0012a2                  _getLightValues
- .text            0x0012dc         0x36 build/default/production/mainSetup.o
-                  0x0012dc                  _setupPins
- .text            0x001312         0x2e build/default/production/microMotorController.o
-                  0x001312                  _motorsOff
-                  0x001320                  _turnLeftMotorForward
-                  0x001328                  _turnLeftMotorBackward
-                  0x001330                  _turnRightMotorForward
-                  0x001338                  _turnRightMotorBackward
- .text            0x001340         0x2c build/default/production/main.o
-                  0x001340                  _main
+.text             0x00110a        0x26c
+ .text            0x00110a         0xa4 build/default/production/robotOsPhotoResistorController.o
+                  0x00110a                  _turnTowardLight
+                  0x001126                  _getLightDirection
+                  0x001148                  _checkIfUnderLight
+                  0x001186                  _checkIfCloseToLight
+ .text            0x0011ae         0x9c build/default/production/robotOsMotorController.o
+                  0x0011ae                  _moveForward
+                  0x0011de                  _moveBackward
+                  0x0011fa                  _turnRight
+                  0x001222                  _turnLeft
+ .text            0x00124a         0x40 build/default/production/robotOS.o
+                  0x00124a                  _runRobotOS
+ .text            0x00128a         0x36 build/default/production/mainSetup.o
+                  0x00128a                  _setupPins
+ .text            0x0012c0         0x32 build/default/production/microPhotoResistorController.o
+                  0x0012c0                  _getLightValues
+ .text            0x0012f2         0x2e build/default/production/microMotorController.o
+                  0x0012f2                  _motorsOff
+                  0x001300                  _turnLeftMotorForward
+                  0x001308                  _turnLeftMotorBackward
+                  0x001310                  _turnRightMotorForward
+                  0x001318                  _turnRightMotorBackward
+ .text            0x001320         0x2c build/default/production/main.o
+                  0x001320                  _main
+ .text            0x00134c         0x2a build/default/production/microLEDController.o
+                  0x00134c                  _turnLEDsOff
+                  0x001356                  _turnRedLEDOn
+                  0x00135e                  _turnRedLEDOff
+                  0x001366                  _turnGreenLEDOn
+                  0x00136e                  _turnGreenLEDOff
 
-.init.delay32     0x00136c         0x1c
- .init.delay32    0x00136c         0x1c c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib\libpic30-elf.a(delay32.eo)
-                  0x00136c                  ___delay32
+.init.delay32     0x001376         0x1c
+ .init.delay32    0x001376         0x1c c:/program files (x86)/microchip/mplab c30/bin/bin/../../lib\libpic30-elf.a(delay32.eo)
+                  0x001376                  ___delay32
 
-.text             0x001388          0xe
- .text            0x001388          0xe build/default/production/microLatchController.o
-                  0x001388                  _resetSRLatch
+.text             0x001392          0xe
+ .text            0x001392          0xe build/default/production/microLatchController.o
+                  0x001392                  _resetSRLatch

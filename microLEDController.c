@@ -17,22 +17,6 @@ void turnRedLEDOn() // left
     redLED = ON;
 }
 
-void toggleRedLED() // left
-{
-    //printf("The red LED is on.\n");
-    redLED = ON;
-    pause(10);
-    redLED = OFF;
-}
-
-void toggleGreenLED() //left
-{
-    //printf("The green LED is on.\n");
-    greenLED = ON;
-    pause(10);
-    greenLED = OFF;
-}
-
 void turnRedLEDOff()
 {
     //printf("The red LED is off.\n");

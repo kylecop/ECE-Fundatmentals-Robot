@@ -26,39 +26,42 @@ void clearObstacle(int bumperState)
 void clearLeftBumperObstacle()
 {
 	int bumperState = LEFT, count = 0;
-	//while(count < 5)//bumperState == LEFT)
-	//{
-		//count++;
+	while(count < 5)//bumperState == LEFT)
+	{
+		count++;
 		moveBackward();
 		turnRight();
 		moveForward();
+		pause(200);
 		moveForward();
-		moveForward();
-		turnLeft();
+		pause(200);
 		moveForward();
 		//bumperState = checkBumpers();
-	//}
+	}
+	pause(200);
 	//turnTowardLight();
-	//toggleGreenLED();
+	turnLeft();
 }
 
 void clearRightBumperObstacle()
 {
 	
 	int bumperState = RIGHT, count = 0;
-	//while(count < 5)//bumperState == RIGHT)
-	//{
-		//count++;
+	while(count < 5)//bumperState == RIGHT)
+	{
+		count++;
 		moveBackward();
 		turnLeft();
 		moveForward();
+		pause(200);
 		moveForward();
-		moveForward();
-		turnRight();
+		pause(200);
 		moveForward();
 		//bumperState = checkBumpers();
-	//}
+	}
+	pause(200);
 	//turnTowardLight();
+	turnRight();
 }
 
 void clearDoubleBumperObstacle()
@@ -70,7 +73,9 @@ void clearDoubleBumperObstacle()
 		count++;
 		getLightValues(&leftLight, &rightLight);
 		moveBackward();
+		pause(200);
 		turnRight();
+		pause(400);
 		getLightValues(&leftLight2, &rightLight2);
 		if((leftLight >= leftLight2 && leftLight - leftLight2 < 100) || (leftLight2 > leftLight && leftLight2 - leftLight < 100))
 		{
@@ -88,7 +93,9 @@ void clearDoubleBumperObstacle()
 		count++;
 		getLightValues(&leftLight, &rightLight);
 		moveBackward();
+		pause(200);
 		turnLeft();
+		pause(400);
 		getLightValues(&leftLight2, &rightLight2);
 		if((leftLight >= leftLight2 && leftLight - leftLight2 < 100) || (leftLight2 > leftLight && leftLight2 - leftLight < 100))
 		{
@@ -115,7 +122,7 @@ int checkBumpers()
 	if(!leftBumper && !rightBumper)
 		result = CLEAR;
 	
-	//if(result != CLEAR)
+	if(result != CLEAR)
 		resetSRLatch();
 	
 	return result;

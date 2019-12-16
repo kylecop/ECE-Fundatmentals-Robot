@@ -14,13 +14,19 @@ int main() {
      */
     initializeUART();
     pause(1000);
-    setupPins();
-    printf("I'm in the main!\n");
-
-    if (testPin3 || testPin4)
-        runTestSuite();
-    else
-        runRobotOS();
+    
+    pin2Direction = INPUT;
+    pin2Type = ANALOG;
+    while(1)
+	    printf("value: %d", )
+    //setupPins();
+//
+//    printf("I'm in the main!\n");
+//
+//    if (testPin3 || testPin4)
+//        runTestSuite();
+//    else
+//        runRobotOS();
 
     halt();
     return (0);

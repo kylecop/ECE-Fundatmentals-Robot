@@ -36,7 +36,7 @@
 #define lightAdjustment5000toInfinity 3
 
 
-#define movePause 200
+#define movePause 50
 #define transitionPause 100
 
 #define ON 1
@@ -81,8 +81,6 @@ void turngreenLEDOn();
 void turnGreenLEDOff();
 void turnRedLEDOn();
 void turnRedLEDOff();
-void toggleGreenLED();
-void toggleRedLED();
 
 
 void moveForward();
@@ -104,5 +102,11 @@ void clearRightBumperObstacle();
 
 void getLightValues(int* leftLightValue, int* rightLightValue);
 int getLightDirection(const int leftLightValue, const int rightLightValue);
+
+
+
+
+
+
 
 #endif // DEFINITIONS_H_ 
