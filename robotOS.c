@@ -13,27 +13,30 @@ const int
     transitionPause = 100,
     //forwardDelay = 125, // theSequence() values
     forwardDelay = 155,
+    forwardDelaySlow = 100,
     backwardDelay = 185,
     leftOnMs = 30,  //moving forward turn on left first for x ms
     rightOnMs = 30, //moving backward turn on right first for x ms
-    //turnRightDelay = 102, // theSequence() value
-    //turnLeftDelay = 70; // theSequence value
     turnRightDelay = 110,
-    turnLeftDelay = 85;
+    turnLeftDelay = 85,
+    turnLeftDelaySlow = 65,
+    turnRightDelaySlow = 90;
+
 void runRobotOS()
 {
     printf("The robot is up and running!!\n");
     while(1)
     {
+        int speed = 0, leftTurnSpeed = 0, rightTurnSpeed = 0;
         int i = 0;
         int bump = 0;
         int tempLight = 0;
         for(i = 0; i < 1; i++)
         {
-            tempLight = checkLight();
+            tempLight = checkLight(speed, leftTurnSpeed, rightTurnSpeed);
             bump = checkBumpers(tempLight);
-            moveForward();
-            moveForward();
+            moveForward(speed);
+            moveForward(speed);
         }
         if(bump == 0 && checkBumpers(0) == 0)
         {
@@ -67,14 +70,13 @@ void moveForward()
     pause(movePause);
 }
     
-int checkBumpers(int tempLight)
+int checkBumpers(const int speed, const int leftTurnSpeed, const int rightTurnSpeed)
 {
     int result = 0;
     pause(10);
     int i = 0;
     int leftReaction = 0, rightReaction = 0;
-//    for(i = 0; i < 10; i++)
-//    {
+    
         if(leftBumper && rightBumper)
         {
             leftReaction = 1;
@@ -93,34 +95,14 @@ int checkBumpers(int tempLight)
         {
             pause(10);
         }
-//    if(tempLight = 4)
-//    {
-//        
-//            pause(movePause);
-//            moveBackward();
-//            pause(movePause);
-//            turnRight();
-//            pause(movePause);
-//            moveForward();
-//    }
-//    else if (tempLight = 5)
-//    {
-//        
-//            pause(movePause);
-//            moveBackward();
-//            pause(movePause);
-//            turnLeft();
-//            pause(movePause);
-//            moveForward();
-//    }else{
         if(leftReaction && !rightReaction)
         {
             pause(movePause);
             moveBackward();
             pause(movePause);
-            turnLeft();
+            turnLeft(leftTurnSpeed);
             pause(movePause);
-            moveForward();
+            moveForward(speed);
             
         }
         if(rightReaction && !leftReaction)
@@ -129,9 +111,9 @@ int checkBumpers(int tempLight)
             pause(movePause);
             moveBackward();
             pause(movePause);
-            turnRight();
+            turnRight(rightTurnSpeed);
             pause(movePause);
-            moveForward();
+            moveForward(speed);
         }
         if(leftReaction && rightReaction)
         {
@@ -143,9 +125,9 @@ int checkBumpers(int tempLight)
             //pause(movePause);
             //turnLeft();
             pause(movePause);
-            turnLeft();
+            turnLeft(leftTurnSpeed);
             pause(movePause);
-            moveForward();
+            moveForward(speed);
         }
     //}
         pause(10);

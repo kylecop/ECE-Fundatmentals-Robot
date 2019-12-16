@@ -16,7 +16,7 @@
 #include <p30fxxxx.h> //?
 #include <libpic30.h>
 
-int checkLight()
+int checkLight(int& speed, int& rightTurnSpeed, int& leftTurnSpeed)
 {
     int result = 0;
     int leftCount = 0, rightCount = 0;
@@ -79,14 +79,16 @@ int checkLight()
     }
     if(leftLight > 9300 && rightLight > 9300)
         result = 3;
-//    if(leftLight < 1500 || rightLight < 1500)
-//    {
-//        turnLeftDelay = turnLeftDelayLT1500;
-//        turnRightDelay = turnRightDelayLT1500;
-//    }else{
-//        turnLeftDelay = turnLeftDelayLT800;
-//        turnRightDelay = turnRightDelayLT800;
-//    }
+    
+    
+    if(leftLight < 800 || rightLight < 800)
+    {
+        speed = forwardDelaySlow;
+    }
+    else
+    {
+        speed = forwardDelay;
+    }
     return result;
 }
 void resetSRLatch()
