@@ -15,18 +15,11 @@
       <itemPath>aliases.h</itemPath>
       <itemPath>definitions.h</itemPath>
       <itemPath>main.c</itemPath>
+      <itemPath>microfunctions.c</itemPath>
       <itemPath>robotOS.c</itemPath>
       <itemPath>testSuite.c</itemPath>
       <itemPath>utilities.c</itemPath>
       <itemPath>utilities.h</itemPath>
-      <itemPath>microMotorController.C</itemPath>
-      <itemPath>microLEDController.c</itemPath>
-      <itemPath>microPhotoResistorController.c</itemPath>
-      <itemPath>microLatchController.c</itemPath>
-      <itemPath>robotOsMotorController.c</itemPath>
-      <itemPath>robotOsBumperController.c</itemPath>
-      <itemPath>mainSetup.c</itemPath>
-      <itemPath>robotOsPhotoResistorController.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
