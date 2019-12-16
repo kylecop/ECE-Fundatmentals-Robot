@@ -3,8 +3,8 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>Project4</name>
-            <creation-uuid>7b1db2ea-000b-4475-9872-28fdd16490bf</creation-uuid>
+            <name>Project5</name>
+            <creation-uuid>45ea56e5-533f-4630-9e3b-1c79ac32c02a</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>
             <cpp-extensions/>

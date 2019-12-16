@@ -7,14 +7,15 @@
 #include "utilities.h"
 #include "definitions.h"
 
-void setupPins();
-
 int main() {
   /* initialize the ability to send messages to the
    * PICKit 2 using printf.
    */
   initializeUART();
+  pause(1000);
   setupPins();
+    
+        
   printf("I'm in the main!\n");
   if(testPin3)
       printf("test pin 3 \n");
@@ -30,30 +31,22 @@ int main() {
   return(0);
 }
 
-setupPins()
+void setupPins()
 {
-    //Define pin 5 to control the red LED
-    pin5Direction = OUTPUT;
-    pin5Type = DIGITAL;
-    
-    //Define pin 6 to control the green LED
-    pin6Direction = OUTPUT;
-    pin6Type = DIGITAL;
-    
-    //Define pins for the dip switch
-    pin3Direction = INPUT;
-    pin3Type = DIGITAL;
-    pin4Direction = INPUT;
-    pin4Type = DIGITAL;
-    
-    //Define pins for the motor drivers
-    pin23Direction = OUTPUT;
-    pin24Direction = OUTPUT;
-    pin25Direction = OUTPUT;
-    pin26Direction = OUTPUT;
-    pin23Type = DIGITAL;
-    pin24Type = DIGITAL;
-    pin25Type = DIGITAL;
-    pin26Type = DIGITAL;
-    
+    pin3Direction = INPUT; //dip switch
+    pin4Direction = INPUT; //dip switch
+    pin5Direction = OUTPUT; //the red LED
+    pin6Direction = OUTPUT; //the green LED
+    pin23Direction = OUTPUT; //motor
+    pin24Direction = OUTPUT; //motor
+    pin25Direction = OUTPUT; //motor
+    pin26Direction = OUTPUT; //motor
+    pin3Type = DIGITAL; //dip switch
+    pin4Type = DIGITAL; //dip switch
+    pin5Type = DIGITAL; //the red LED
+    pin6Type = DIGITAL; //the green LED
+    pin23Type = DIGITAL; //motor
+    pin24Type = DIGITAL; //motor
+    pin25Type = DIGITAL; //motor
+    pin26Type = DIGITAL; //motor
 }

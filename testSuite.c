@@ -1,7 +1,7 @@
 /*
  * testSuite.c
  * Created on Feb 6, 2018
- * author: jeff.bigelow
+ * author: kyle.coppedge
  */
 
 #include "stdio.h"
@@ -31,31 +31,27 @@ void runMotorTest()
     
     turnLeftMotorForward();
     turnLEDsOnIfMoving();
-    pause(1000);
+    pause(100);
     motorsOff();
-    
-    pause(500);
-    
-    turnLeftMotorBackward();
-    turnLEDsOnIfMoving();
-    pause(1000);
-    motorsOff();
-    
     pause(500);
     
     turnRightMotorForward();
     turnLEDsOnIfMoving();
-    pause(1000);
+    pause(100);
     motorsOff();
+    pause(500);
     
+    turnLeftMotorBackward();
+    turnLEDsOnIfMoving();
+    pause(100);
+    motorsOff();
     pause(500);
     
     turnRightMotorBackward();
     turnLEDsOnIfMoving();
-    pause(1000);
+    pause(100);
     motorsOff();
 }
-
 
 void runBumperTest()
 {
@@ -68,3 +64,7 @@ void runLightTest()
     
     printf("I'm in the light test.\n");
 }
+
+
+
+

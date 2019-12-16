@@ -34,5 +34,11 @@ void runTestSuite();
 void runMotorTest();
 void runBumperTest();
 void runLightTest();
+void moveForward();
+void moveBackward();
+void turnRight();
+void turnLeft();
+void theSequence();
+void turnLEDsOff();
 
 #endif // DEFINITIONS_H_ 
