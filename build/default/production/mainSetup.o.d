@@ -1,5 +1,5 @@
-build/default/production/robotOS.o:  \
-robotOS.c  \
+build/default/production/mainSetup.o:  \
+mainSetup.c  \
 definitions.h  \
 aliases.h  \
 utilities.h  \
