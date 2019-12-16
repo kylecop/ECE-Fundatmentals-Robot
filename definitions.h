@@ -1,3 +1,4 @@
+
 /*
  * definitions.h
  *
@@ -22,8 +23,9 @@
 #define rightMotorCCW digOutput26
 #define leftBumper digInput14
 #define rightBumper digInput7
-#define resetLatch digOutput10
-
+#define resetLatch digOutput21
+#define leftPhotoResistor digOutput11
+#define rightPhotoResistor digInput12
 
 /*
  * function definitions
@@ -46,6 +48,7 @@ void turnRight();
 void turnLeft();
 void theSequence();
 void turnLEDsOff();
-void checkBumpers();
+int checkBumpers();
+int checkLights();
 
 #endif // DEFINITIONS_H_ 

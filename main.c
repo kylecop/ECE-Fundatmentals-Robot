@@ -15,7 +15,7 @@ int main() {
   pause(1000);
   setupPins();
     
-        
+
   printf("I'm in the main!\n");
   if(testPin3)
       printf("test pin 3 \n");
@@ -39,7 +39,10 @@ void setupPins()
     pin6Direction = OUTPUT; //the green LED
     pin7Direction = INPUT; // RIGHT BUMPER
     pin10Direction = OUTPUT; // RESET BUMPER
+    pin11Direction = OUTPUT; // left photo resistor
+    pin12Direction = INPUT; // right photo resistor
     pin14Direction = INPUT; // LEFT BUMPER
+    pin21Direction = OUTPUT;
     pin23Direction = OUTPUT; //motor
     pin24Direction = OUTPUT; //motor
     pin25Direction = OUTPUT; //motor
@@ -49,8 +52,8 @@ void setupPins()
     pin5Type = DIGITAL; //the red LED
     pin6Type = DIGITAL; //the green LED
     pin7Type = DIGITAL; // RIGHT BUMPER
-    //pin10Type = DIGITAL; // RIGHT BUMPER
-    //pin14Type = DIGITAL; // LEFT BUMPER
+    //pin10Type = DIGITAL;
+    //pin21Type = DIGITAL;
     pin23Type = DIGITAL; //motor
     pin24Type = DIGITAL; //motor
     pin25Type = DIGITAL; //motor

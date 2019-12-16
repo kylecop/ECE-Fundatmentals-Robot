@@ -6,6 +6,7 @@
  * 	              May, 2009 - Pat Smith, updated for actual pin numbers
  */
 
+#include <stdio.h> //to resolve printf error
 #include <p30f3013.h>
 
 

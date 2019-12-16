@@ -3,32 +3,52 @@
  * Purpose: Project 2
  * date: 1/11/2018
  */
-#include "stdio.h"
+#include <stdio.h> //to resolve printf error
+#include <p30f3013.h>
 #include "definitions.h"
 #include "aliases.h"
 #include "utilities.h"
 const int 
-    movePause = 100,
+    movePause = 50,
     transitionPause = 100,
     //forwardDelay = 125, // theSequence() values
-    forwardDelay = 80,
-    backwardDelay = 95,
-    leftOnMs = 15,  //moving forward turn on left first for x ms
+    forwardDelay = 155,
+    backwardDelay = 185,
+    leftOnMs = 30,  //moving forward turn on left first for x ms
     rightOnMs = 30, //moving backward turn on right first for x ms
     //turnRightDelay = 102, // theSequence() value
     //turnLeftDelay = 70; // theSequence value
-    turnRightDelay = 80,
-    turnLeftDelay = 60;
-
+    turnRightDelay = 110,
+    turnLeftDelay = 85;
 void runRobotOS()
 {
     printf("The robot is up and running!!\n");
-    //theSequence(); // FFF RRR FFFF L RRRRR LL
     while(1)
     {
-        moveForward();
-        checkBumpers();
-        pause(transitionPause);
+        int i = 0;
+        int bump = 0;
+        int tempLight = 0;
+        for(i = 0; i < 1; i++)
+        {
+            tempLight = checkLight();
+            bump = checkBumpers(tempLight);
+            moveForward();
+            moveForward();
+        }
+        if(bump == 0 && checkBumpers(0) == 0)
+        {
+            
+            if(checkLight() != 3)
+            {
+                if(checkLight() == 1)
+                    turnLeft();
+                else
+                    turnRight();
+            
+            }
+        }
+        
+        //pause(transitionPause);
     }
     printf("Robot will shut down... \n");
     halt();
@@ -36,18 +56,21 @@ void runRobotOS()
 
 void moveForward()
 {
-    printf("I am moving forward\n");
+    //printf("I am moving forward\n");
     turnLeftMotorForward();
     pause(leftOnMs);
     turnRightMotorForward();
-    turnLEDsOnIfMoving();
+    //turnLEDsOnIfMoving();
     pause(forwardDelay);
-    turnLEDsOff();
+    //turnLEDsOff();
     motorsOff();
-    //pause(movePause);
+    pause(movePause);
 }
-void checkBumpers()
+    
+int checkBumpers(int tempLight)
 {
+    int result = 0;
+    pause(10);
     int i = 0;
     int leftReaction = 0, rightReaction = 0;
 //    for(i = 0; i < 10; i++)
@@ -70,6 +93,26 @@ void checkBumpers()
         {
             pause(10);
         }
+//    if(tempLight = 4)
+//    {
+//        
+//            pause(movePause);
+//            moveBackward();
+//            pause(movePause);
+//            turnRight();
+//            pause(movePause);
+//            moveForward();
+//    }
+//    else if (tempLight = 5)
+//    {
+//        
+//            pause(movePause);
+//            moveBackward();
+//            pause(movePause);
+//            turnLeft();
+//            pause(movePause);
+//            moveForward();
+//    }else{
         if(leftReaction && !rightReaction)
         {
             pause(movePause);
@@ -95,98 +138,61 @@ void checkBumpers()
             
             pause(movePause);
             moveBackward();
-            pause(movePause);
-            turnLeft();
-            pause(movePause);
-            turnLeft();
+            //pause(movePause);
+            //turnLeft();
+            //pause(movePause);
+            //turnLeft();
             pause(movePause);
             turnLeft();
             pause(movePause);
             moveForward();
         }
+    //}
         pause(10);
         if(leftReaction || rightReaction)
         {
             resetSRLatch();
-            
+            result = 1;
         }
     //}
     pause(movePause);
-}
-
-void theSequence() // FFF RRR FFFF L RRRRR LL
-{
-    
-    motorsOff();
-    int i = 0;
-    for(i = 0; i<3; i++) // F F F
-        moveForward();    
-    
-    motorsOff();
-    pause(transitionPause);
-    
-    for(i = 0; i<3; i++) // R R R
-        turnRight();
-    
-    motorsOff();
-    pause(transitionPause);
-    
-    for(i = 0; i<4; i++) // F F F F
-        moveForward();    
-    
-    motorsOff();
-    pause(transitionPause);
-    
-    turnLeft();            // L
-    motorsOff();
-    pause(transitionPause);
-    
-    for(i = 0; i<5; i++)   // R R R R R
-        moveBackward();    
-    
-    motorsOff();
-    pause(transitionPause);
-    
-    for(i = 0; i<2; i++)    // L L
-        turnLeft();
-    
-    motorsOff();
+    return result;
 }
 
 
 void moveBackward()
 {
-    printf("I am moving backward\n");
+    //printf("I am moving backward\n");
     turnRightMotorBackward();
     pause(rightOnMs);
     turnLeftMotorBackward();
-    turnLEDsOnIfMoving();
+    //turnLEDsOnIfMoving();
     pause(backwardDelay);
-    turnLEDsOff();
+    //turnLEDsOff();
     motorsOff();
     pause(movePause);
 }
 
 void turnRight()
 {
-    printf("I am pivoting right\n");
+    //printf("I am pivoting right\n");
     turnLeftMotorForward();
     turnRightMotorBackward();
-    turnLEDsOnIfMoving();
+    //turnLEDsOnIfMoving();
     pause(turnRightDelay);
-    turnLEDsOff();
+    //turnLEDsOff();
     motorsOff();
     pause(movePause);
 }
 
 void turnLeft()
 {
-    printf("I am pivoting left\n");
+    //printf("I am pivoting left\n");
     turnRightMotorForward();
     turnLeftMotorBackward();
-    turnLEDsOnIfMoving();
+    //turnLEDsOnIfMoving();
     pause(turnLeftDelay);
-    turnLEDsOff();
+    //turnLEDsOff();
     motorsOff();
     pause(movePause);
 }
